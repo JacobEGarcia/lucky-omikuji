@@ -16,19 +16,20 @@ canvas{display:block;position:fixed;inset:0}
 #top .brand{font-size:11px;letter-spacing:4px;color:#C9A227}
 #top h1{margin:6px 0 0;font-size:30px;letter-spacing:10px;font-weight:700}
 #streak{top:30px;right:34px;font-size:12px;letter-spacing:2px;color:#C9A227;text-align:right}
-#foot{bottom:22px;left:0;right:0;font-size:11px;letter-spacing:1.5px;color:#6f6455;line-height:1.9}
+#footwrap{position:fixed;bottom:12px;left:0;right:0;text-align:center;user-select:none;padding:0 14px;box-sizing:border-box;pointer-events:none;z-index:2;line-height:1.9}
+#foot{font-size:11px;letter-spacing:1.5px;color:#6f6455}
 #foot a{color:#C9A227;text-decoration:none;pointer-events:auto}
 #foot a:hover{text-decoration:underline}
-#hint{bottom:72px;left:0;right:0;font-size:12px;letter-spacing:2px;color:#8a7a5e}
+#hint{font-size:12px;letter-spacing:2px;color:#8a7a5e;margin-top:2px}
 </style>
 </head>
 <body>
 <canvas id="cv"></canvas>
 <div class="hud" id="top"><div class="brand">LUCKY CAT ROBOTICS</div><h1>OMIKUJI</h1></div>
 <div class="hud" id="streak">STREAK 0</div>
-<div class="hud" id="hint">shake the box</div>
-<div class="hud" id="foot">the voice assistant that brings you luck &middot; <a href="https://jacobegarcia.github.io/luckycat/" target="_blank">luckycat</a> &middot; made in chicago<br>
-shake or tap the box &middot; pull the stick &middot; tie bad luck to the rope &middot; one true draw a day &middot; s = card</div>
+<div id="footwrap"><div id="hint">shake the box</div>
+<div id="foot">the voice assistant that brings you luck &middot; <a href="https://jacobegarcia.github.io/luckycat/" target="_blank">luckycat</a> &middot; made in chicago<br>
+shake or tap the box &middot; pull the stick &middot; tie bad luck to the rope &middot; one true draw a day &middot; s = card</div></div>
 <script>
 'use strict';
 const Q=new URLSearchParams(location.search), SHOT=Q.has('shot');
